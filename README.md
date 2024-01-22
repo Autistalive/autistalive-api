@@ -1,7 +1,6 @@
 # Bem-vindo ao projeto austista livre
 Este documento tem por objetivo relatar aspectos como ambientes de desenvolvimento, tutorial de configuração etc... 
 
-
 # Requisitos de sistema
 - utilizar Laravel: https://laravel.com/docs/10.x/
 
