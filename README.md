@@ -4,26 +4,24 @@ Com Autista.live, o usuário tem um perfil digital com foto, laudo e identifica�
 
 <img src="logo.png" alt="Logo Projeto" style="width:300px;"/>
 
-# Deploy
+# Instalação
+Para realizar a instalação é necessário [docker](https://www.docker.com/).
 
-A aplicação é executada de forma simples em ambiente docker:
-
-### Linux
-```
-cd web/
-cp .env.example .env
-./vendor/bin/sail up -d
-```
-
-### Windows
-```
-cd web/
-wsl -d <distro name>
-cp .env.example .env
-./vendor/bin/sail up -d
+```bash
+$ git clone https://github.com/Autistalive/web.git
+$ cd web/
+$ docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php83-composer:latest \
+    composer install --ignore-platform-reqs
+$ ./vendor/bin/sail up -d
 ```
 
-A primeira vez que o deploy for realizado, pode demorar um pouco, a imagem do projeto será construida, os deploys seguintes serão instantâneos eventualmente.
+Acesse a aplicação utilizando http://localhost
+
+A primeira vez que a instalação for realizada, pode demorar um pouco, a imagem do projeto será construida, os deploys seguintes serão instantâneos eventualmente.
 
 ##### Obs: Deploy usando Docker Desktop no Windows requer que acesse o projeto dentro do WSL.
 
