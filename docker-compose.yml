@@ -23,6 +23,7 @@ services:
             - sail
         depends_on:
             - mariadb
+            
     mariadb:
         image: 'mariadb:10'
         ports:
