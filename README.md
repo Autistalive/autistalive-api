@@ -1,7 +1,8 @@
 # Autista.live
-Programa de identificação digital para autistas.
+Autista.live é uma solução de identificação digital desenvolvida para atender uma necessidade da comunidade autista. Este software foi projetado com o objetivo de oferecer uma maneira eficaz e personalizada de fornecer o laudo e uma identificação eletronica na palma da sua mão.
+Com Autista.live, o usuário tem um perfil digital com foto, laudo e identificação digital, incluindo detalhes relevantes e necessidades de acordo com o laudo. 
 
-<img src="logo.png" alt="Logo Projeto" style="width:400px;"/>
+<img src="logo.png" alt="Logo Projeto" style="width:300px;"/>
 
 # Deploy
 
@@ -28,3 +29,9 @@ A primeira vez que o deploy for realizado, pode demorar um pouco, a imagem do pr
 
 ## Roadmap
 Por favor leia nosso  [Roadmap](roadmap)
+
+## Obrigado aos contribuidores ❤
+
+ <a href = "https://github.com/Autistalive/web/graphs/contributors">
+   <img src = "https://contrib.rocks/image?repo=Autistalive/web"/>
+ </a>
