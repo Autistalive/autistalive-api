@@ -10,6 +10,7 @@ A aplicação é executada de forma simples em ambiente docker:
 ### Linux
 ```
 cd web/
+cp .env.example .env
 ./vendor/bin/sail up -d
 ```
 
@@ -17,6 +18,7 @@ cd web/
 ```
 cd web/
 wsl -d <distro name>
+cp .env.example .env
 ./vendor/bin/sail up -d
 ```
 
