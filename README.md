@@ -4,6 +4,15 @@ Com Autista.live, o usuário tem um perfil digital com foto, laudo e identifica�
 
 <img src="logo.png" alt="Logo Projeto" style="width:300px;"/>
 
+## Comunicação
+Temos um grupo para comunicação em tempo real aonde discutimos sobre o projeto no XMPP.
+Favor participar!
+
+```
+autista.live@conference.slackjeff.com.br
+```
+Se você estiver usando Linux, você pode usar os seguintes clientes: Gajim, Dino, ou via web Converse.js
+
 ## Dependências
 
 - PHP <= 8.1
