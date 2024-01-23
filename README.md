@@ -31,7 +31,7 @@ A aplicação é executada de forma simples em ambiente docker.
 
 1. Clone o repositório
 ```
-git clone https://github.com/Autistalive/web.git && cd web
+git clone https://github.com/Autistalive/autistalive-api.git && cd autistalive-api
 ```
 
 2. Instale as dependências via `composer` e `npm`.
@@ -55,8 +55,7 @@ php artisan key:generate
 
 1. Clone o repositório.
 ```
-git clone https://github.com/Autistalive/web.git
-cd web
+git clone https://github.com/Autistalive/autistalive-api.git && cd autistalive-api
 ```
 
 2. Instale as dependências via `composer` e `npm`.
