@@ -87,7 +87,7 @@ A primeira vez que o deploy for realizado, pode demorar um pouco, a imagem do pr
 ##### Obs: Deploy usando Docker Desktop no Windows requer que acesse o projeto dentro do WSL.
 
 ## Roadmap
-Por favor leia nosso [Roadmap](ROADMAP.md)
+Por favor leia nosso [Roadmap](roadmap.md)
 
 ## Obrigado aos contribuidores ❤
 
