@@ -91,5 +91,5 @@ Por favor leia nosso [Roadmap](roadmap.md)
 ## Obrigado aos contribuidores ❤
 
 <a href = "https://github.com/Autistalive/web/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=Autistalive/web"/>
+  <img src = "https://contrib.rocks/image?repo=Autistalive/autistalive-api"/>
 </a>
