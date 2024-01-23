@@ -15,11 +15,8 @@ Se você estiver usando Linux, você pode usar os seguintes clientes: Gajim, Din
 
 ## Dependências
 
-- PHP <= 8.1
-- Composer <= 2.6
 - NPM <= 10.2
 - NodeJS <= 18.19
-- Laravel == 10
 - Docker <= 24.0
 - Docker Compose <= v2.23
 
@@ -34,59 +31,81 @@ A aplicação é executada de forma simples em ambiente docker.
 git clone https://github.com/Autistalive/autistalive-api.git && cd autistalive-api
 ```
 
-2. Instale as dependências via `composer` e `npm`.
-```
-composer install
-npm install
-```
-
-3. Crie o arquivo `.env` e gere uma `APP_KEY`
+2. Crie o arquivo `.env`.
 ```
 cp .env.example .env
-php artisan key:generate
 ```
 
-3. Faça o deploy do ambiente de teste
+3. Instale as dependências via `composer`.
 ```
-./vendor/bin/sail up -d
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v ".:/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqs
 ```
+
+4. Faça o deploy da aplicação.
+```
+sail up -d
+```
+<small>Em caso de erro: https://laravel.com/docs/10.x/sail#configuring-a-shell-alias</small>
+
+3. Crie uma nova `APP_KEY` para a aplicação
+```
+sail php artisan key:generate
+```
+
+4. Acesse `http://localhost`
 
 ### Windows
 
 1. Clone o repositório.
 ```
-git clone https://github.com/Autistalive/autistalive-api.git && cd autistalive-api
+git clone https://github.com/Autistalive/autistalive-api.git
+cd autistalive-api
 ```
 
-2. Instale as dependências via `composer` e `npm`.
+2. Crie o arquivo `.env`.
 ```
-composer install
-npm install
+cp .env.example .env
 ```
 
-3. Dentro da pasta do projeto, entre no WSL2.
+3. Instale as dependências via `composer`.
+```
+docker run --rm \
+    -u "1000:1000" \
+    -v ".:/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqs
+```
+
+4. Dentro da pasta do projeto, entre no WSL2.
 ```
 wsl -d <distro name>
 ```
 <small>`Obs: Distros podem ser instaladas pela Microsoft Store.`</small>
 
-4. Crie o arquivo `.env` e gere uma `APP_KEY`.
-```
-cp .env.example .env
-php artisan key:generate
-```
-
-5. Faça o deploy do ambiente de teste.
+5. Faça o deploy da aplicação.
 ```
 ./vendor/bin/sail up -d
 ```
 
+6. Crie uma nova `APP_KEY` para a aplicação
+```
+./vendor/bin/sail php artisan key:generate
+```
+
+7. Acesse `http://localhost`
+
 A primeira vez que o deploy for realizado, pode demorar um pouco, a imagem do projeto será construida, os deploys seguintes serão instantâneos eventualmente.
 
-##### Obs: Deploy usando Docker Desktop no Windows requer que acesse o projeto dentro do WSL.
+<small>`Obs: Deploy usando Docker Desktop no Windows requer que acesse o projeto dentro do WSL.`</small>
 
 ## Roadmap
-Por favor leia nosso [Roadmap](roadmap.md)
+Por favor leia nosso [Roadmap](ROADMAP.md)
 
 ## Obrigado aos contribuidores ❤
 
