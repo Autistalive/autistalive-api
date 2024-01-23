@@ -15,8 +15,6 @@ Se você estiver usando Linux, você pode usar os seguintes clientes: Gajim, Din
 
 ## Dependências
 
-- NPM <= 10.2
-- NodeJS <= 18.19
 - Docker <= 24.0
 - Docker Compose <= v2.23
 
@@ -42,7 +40,7 @@ docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v ".:/var/www/html" \
     -w /var/www/html \
-    laravelsail/php81-composer:latest \
+    laravelsail/php83-composer:latest \
     composer install --ignore-platform-reqs
 ```
 
