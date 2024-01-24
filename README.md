@@ -1,4 +1,9 @@
 # Autista.live
+
+![GitHub License](https://img.shields.io/github/license/autistalive/autistalive-api)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/autistalive/autistalive-api/main)
+
+
 Autista.live é uma solução de identificação digital desenvolvida para atender uma necessidade da comunidade autista. Este software foi projetado com o objetivo de oferecer uma maneira eficaz e personalizada de fornecer o laudo e uma identificação eletronica na palma da sua mão.
 Com Autista.live, o usuário tem um perfil digital com foto, laudo e identificação digital, incluindo detalhes relevantes e necessidades de acordo com o laudo. 
 
@@ -112,7 +117,7 @@ A primeira vez que o deploy for realizado, pode demorar um pouco, a imagem do pr
 <small>`Obs: Deploy usando Docker Desktop no Windows requer que acesse o projeto dentro do WSL.`</small>
 
 ## Roadmap
-Por favor leia nosso [Roadmap](roadmap.md)
+Por favor leia nosso [Roadmap](ROADMAP.md)
 
 ## Obrigado aos contribuidores ❤
 
