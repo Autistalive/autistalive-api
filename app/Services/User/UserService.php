@@ -2,10 +2,10 @@
 
 namespace App\Services\User;
 
+use App\Enums\UserStatus;
 use App\Models\Media;
 use App\Models\User;
 use App\Services\Upload\UploadService;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserService
@@ -30,6 +30,8 @@ class UserService
             attributes: [
                 'name' => $data['name'],
                 'email' => $data['email'],
+                'support_level' => $data['support_level'],
+                'status' => UserStatus::UNVERIFIED,
                 'password' => Hash::make($data['password']),
                 'report_photo' => $report_photo->path,
                 'face_photo' => $face_photo->path,

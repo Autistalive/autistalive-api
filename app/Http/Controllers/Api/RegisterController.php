@@ -17,6 +17,7 @@ class RegisterController extends Controller
     public function __invoke(RegisterRequest $request): JsonResponse
     {
         $user = $this->service->create($request->all());
+        dd($user);
 
         return new JsonResponse(
             data: [

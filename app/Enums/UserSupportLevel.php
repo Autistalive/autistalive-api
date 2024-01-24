@@ -4,7 +4,7 @@ namespace App\Enums;
 
 enum UserSupportLevel: int
 {
-    case LIGHT = 1;
+    case LOW = 1;
     case MODERATE = 2;
     case HIGH = 3;
 
