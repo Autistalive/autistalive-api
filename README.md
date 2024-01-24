@@ -55,7 +55,12 @@ sail up -d
 sail php artisan key:generate
 ```
 
-4. Acesse `http://localhost`
+4. Execute as migrations.
+```
+sail php artisan migrate
+```
+
+5. Acesse `http://localhost`
 
 ### Windows
 
@@ -94,6 +99,10 @@ wsl -d <distro name>
 6. Crie uma nova `APP_KEY` para a aplicação
 ```
 ./vendor/bin/sail php artisan key:generate
+```
+7. Execute as migrations.
+```
+./vendor/bin/sail php artisan migrate
 ```
 
 7. Acesse `http://localhost`
