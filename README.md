@@ -11,7 +11,7 @@ Favor participar!
 ```
 https://matrix.to/#/#autistalive:matrix.org
 ```
-Se você estiver usando Linux, você pode usar os seguintes clientes: Gajim, Dino, ou via web Converse.js
+Se você estiver usando Linux, você pode usar os seguintes clientes: [Matrix Clients](https://matrix.org/ecosystem/clients/)
 
 ## Dependências
 
