@@ -185,4 +185,11 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+
+
+    'uploads' => [
+        'disk' => env('FILESYSTEM_DISK'),
+        'hash' => 'sha256'
+    ]
+
 ];

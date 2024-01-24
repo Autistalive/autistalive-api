@@ -3,6 +3,9 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Enums\UserStatus;
+use App\Enums\UserSupportLevel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -23,6 +26,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'support_level',
+        'status',
+        'report_photo',
+        'face_photo'
     ];
 
     /**
@@ -43,5 +50,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'status' => UserStatus::class,
+        'support_level' => UserSupportLevel::class
     ];
 }
