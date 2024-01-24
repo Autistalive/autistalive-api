@@ -23,7 +23,7 @@ jobs:
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
 
     - name: Set up Laravel environment
-      run: cp .env.testing .env
+      run: cp .env.example .env
 
     - name: Run Pest tests
       run: ./vendor/bin/pest
