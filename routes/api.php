@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\RegisterController;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
