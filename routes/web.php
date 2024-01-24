@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json(["version" => "0.0.1-dev"]);
 });
 
 Route::get('/api', function () {
