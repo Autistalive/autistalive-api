@@ -76,7 +76,7 @@ docker run --rm \
     -u "1000:1000" \
     -v ".:/var/www/html" \
     -w /var/www/html \
-    laravelsail/php81-composer:latest \
+    laravelsail/php83-composer:latest \
     composer install --ignore-platform-reqs
 ```
 
@@ -103,7 +103,7 @@ A primeira vez que o deploy for realizado, pode demorar um pouco, a imagem do pr
 <small>`Obs: Deploy usando Docker Desktop no Windows requer que acesse o projeto dentro do WSL.`</small>
 
 ## Roadmap
-Por favor leia nosso [Roadmap](ROADMAP.md)
+Por favor leia nosso [Roadmap](roadmap.md)
 
 ## Obrigado aos contribuidores ❤
 
