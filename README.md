@@ -2,7 +2,7 @@
 
 ![GitHub License](https://img.shields.io/github/license/autistalive/autistalive-api)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/autistalive/autistalive-api/main)
-
+![Testing](https://github.com/autistalive/autistalive-api/actions/workflows/pest-tests.yml/badge.svg)
 
 Autista.live é uma solução de identificação digital desenvolvida para atender uma necessidade da comunidade autista. Este software foi projetado com o objetivo de oferecer uma maneira eficaz e personalizada de fornecer o laudo e uma identificação eletronica na palma da sua mão.
 Com Autista.live, o usuário tem um perfil digital com foto, laudo e identificação digital, incluindo detalhes relevantes e necessidades de acordo com o laudo. 
