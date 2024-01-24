@@ -5,11 +5,11 @@ Com Autista.live, o usuário tem um perfil digital com foto, laudo e identifica�
 <img src="logo.png" alt="Logo Projeto" style="width:300px;"/>
 
 ## Comunicação
-Temos um grupo para comunicação em tempo real aonde discutimos sobre o projeto no XMPP.
+Temos um grupo para comunicação em tempo real aonde discutimos sobre o projeto no MATRIX.
 Favor participar!
 
 ```
-autista.live@conference.slackjeff.com.br
+https://matrix.to/#/#autistalive:matrix.org
 ```
 Se você estiver usando Linux, você pode usar os seguintes clientes: Gajim, Dino, ou via web Converse.js
 
