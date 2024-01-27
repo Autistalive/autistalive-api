@@ -1,6 +1,5 @@
 <?php
 
-test('if is true (example)', function () {
+test('example', function () {
     expect(true)->toBeTrue();
 });
-
