@@ -21,6 +21,7 @@ return new class () extends Migration {
             $table->enum('support_level', UserSupportLevel::values());
             $table->string('report_photo');
             $table->string('face_photo');
+            $table->timestamp('email_verified_at')->nullable();
 
             $table->rememberToken();
             $table->timestamps();
