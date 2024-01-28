@@ -22,7 +22,7 @@ test('password can be reset with valid token', function () {
     $this->post('/admin/forgot-password', ['email' => $admin->email]);
 
     Notification::assertSentTo($admin, ResetPassword::class, function (object $notification) use ($admin) {
-        $response = $this->post('/reset-password', [
+        $response = $this->post('/admin/reset-password', [
             'token' => $notification->token,
             'email' => $admin->email,
             'password' => 'password',
