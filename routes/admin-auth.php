@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::post('/login', [AuthenticatedSessionController::class, 'store'])
         ->middleware('guest')
         ->name('login');
