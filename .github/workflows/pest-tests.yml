@@ -14,7 +14,7 @@ jobs:
         image: mariadb:10
         env:
           MYSQL_ROOT_PASSWORD:
-          MYSQL_DATABASE: laravel
+          MYSQL_DATABASE: testing
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
         ports:
           - 33306:3306
@@ -34,12 +34,6 @@ jobs:
 
       - name: Set up Laravel environment
         run: cp .env.ci .env
-
-      - name: Generate application key
-        run: php artisan key:generate
-
-      - name: Run migrations
-        run: php artisan migrate
 
       - name: Run Pest tests
         run: ./vendor/bin/pest
