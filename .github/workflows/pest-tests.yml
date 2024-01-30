@@ -35,5 +35,8 @@ jobs:
       - name: Set up Laravel environment
         run: cp .env.ci .env
 
+      - name: Generate application key
+        run: php artisan key:generate
+
       - name: Run Pest tests
         run: ./vendor/bin/pest
