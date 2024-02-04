@@ -5,9 +5,11 @@ namespace App\Http\Requests\Auth;
 use App\Enums\UserSupportLevel;
 use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Contracts\Validation\Validator;
 
 class RegisterRequest extends FormRequest
 {
@@ -32,6 +34,7 @@ class RegisterRequest extends FormRequest
             'name' => 'required|string|max:255',
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Password::defaults()],
+            'cpf' => ['required', 'cpf', 'formato_cpf'],
             'support_level' => ['required', Rule::enum(UserSupportLevel::class)],
             'report_photo' => [
                 'required',
@@ -44,5 +47,22 @@ class RegisterRequest extends FormRequest
                     ->max(self::MAX_UPLOAD_SIZE),
             ],
         ];
+    }
+
+    /**
+     * Return validation errors as json response
+     *
+     * @param Validator $validator
+     */
+    protected function failedValidation(Validator $validator): void
+    {
+        $response = [
+            'status' => 'failure',
+            'status_code' => 400,
+            'message' => 'Bad Request',
+            'errors' => $validator->errors(),
+        ];
+
+        throw new HttpResponseException(response()->json($response, 400));
     }
 }
