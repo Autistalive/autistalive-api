@@ -30,6 +30,7 @@ class UserService
             attributes: [
                 'name' => $data['name'],
                 'email' => $data['email'],
+                'cpf' => $data['cpf'],
                 'support_level' => $data['support_level'],
                 'status' => UserStatus::UNVERIFIED,
                 'password' => Hash::make($data['password']),

@@ -26,6 +26,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'cpf',
         'support_level',
         'status',
         'report_photo',
