@@ -34,7 +34,7 @@ class RegisterRequest extends FormRequest
             'name' => 'required|string|max:255',
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Password::defaults()],
-            'cpf' => ['required', 'cpf'],
+            'cpf' => ['required', 'cpf', 'formato_cpf'],
             'support_level' => ['required', Rule::enum(UserSupportLevel::class)],
             'report_photo' => [
                 'required',

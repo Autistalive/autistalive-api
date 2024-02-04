@@ -8,7 +8,7 @@ test('new users can register', function () {
         'name' => 'Test User',
         'email' => 'test@example.com',
         'password' => 'password',
-        'cpf' => '597.234.350-98',
+        'cpf' => fake()->cpf(),
         'password_confirmation' => 'password',
         'support_level' => UserSupportLevel::HIGH->value,
         'report_photo' => UploadedFile::fake()->image('report.png', 600, 600),
